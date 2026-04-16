@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<x-layout active-page="quienessomos">
+    <x-slot:title>
+        RetroStore - Quienes Somos
+    </x-slot>
+
+</x-layout>
+
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head> 
     <title>Sobre mí</title> 
@@ -52,4 +59,4 @@
     </div>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
-</html>
+</html> --}}

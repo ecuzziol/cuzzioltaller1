@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<x-layout active-page="contacto">
+    <x-slot:title>
+        RetroStore - Contacto
+    </x-slot>
+
+</x-layout>
+
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head> 
     <title>Contacto</title> 
@@ -41,4 +48,4 @@
     </div>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
-</html>
+</html> --}}

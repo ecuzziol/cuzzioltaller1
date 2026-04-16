@@ -13,6 +13,7 @@ class ContactoController extends Controller
         // dd($request->input('email'));
         // dd($request->input('mensaje'));
         // Log::error('Something went wron2!');
+        // echo $request->input('nombre');
         $nombre = $request->input('nombre'); 
         $email = $request->input('email'); 
         $mensaje = $request->input('mensaje');
