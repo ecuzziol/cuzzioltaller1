@@ -1,62 +1,41 @@
 <x-layout active-page="quienessomos">
     <x-slot:title>
         RetroStore - Quienes Somos
-    </x-slot>
+        </x-slot>
+        <section class="container">
+            <h2 class="mb-4 text-center">¿Quiénes somos?</h2>
+            <p> En <strong>RetroStore</strong> somos una tienda online especializada en la venta de videojuegos,
+                consolas y accesorios, pensada para quienes disfrutan tanto de los clásicos como de las últimas
+                novedades del mundo gamer. Nuestro objetivo es ofrecer una experiencia de compra simple, confiable y
+                accesible, acercando productos de calidad a toda la comunidad. </p>
+            <p> Nos posicionamos como una alternativa moderna dentro del mercado digital, combinando precios
+                competitivos, atención personalizada y una cuidada selección de productos. Apostamos a un modelo ágil,
+                enfocado en el cliente, donde la transparencia y la confianza son pilares fundamentales. </p>
+            <p> A lo largo de nuestro crecimiento, hemos logrado consolidarnos como una opción en expansión dentro del
+                sector, con un fuerte potencial basado en la digitalización del consumo, la creciente comunidad gamer y
+                nuestra capacidad de adaptarnos rápidamente a las nuevas tendencias. </p>
+            <p> Nuestra historia comienza con una pasión: los videojuegos. Lo que empezó como un proyecto pequeño,
+                impulsado por el interés en el mundo retro y la cultura gamer, fue evolucionando hasta convertirse en
+                una tienda online en constante desarrollo. Con esfuerzo y dedicación, fuimos ampliando nuestro catálogo,
+                mejorando nuestros servicios y construyendo una identidad propia. </p>
+            <h4 class="mt-5">Nuestro equipo</h4>
+            <p> Detrás de RetroStore hay un equipo reducido pero comprometido, formado por tres personas que trabajan
+                día a día para brindar el mejor servicio: </p>
+            <ul>
+                <li><strong>Dueño y fundador:</strong> impulsa la visión del negocio y define la estrategia general.
+                </li>
+                <li><strong>Atención en local físico:</strong> encargado de la atención directa al cliente y la gestión
+                    del stock.</li>
+                <li><strong>Ventas online:</strong> administra la tienda digital, responde consultas y gestiona los
+                    pedidos.</li>
+            </ul>
+            <p> Esta estructura nos permite ser ágiles, cercanos y mantener un trato personalizado con cada cliente.
+            </p>
+            <p class="mt-4"> Hoy seguimos creciendo, con la misma esencia que nos vio nacer: acercar la mejor
+                experiencia gamer a cada cliente, combinando nostalgia, innovación y compromiso. </p>
+
+            <p class="mt-4"> Atte. el equipo de <strong>RetroStore</strong> </p>
+
+        </section>
 
 </x-layout>
-
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head> 
-    <title>Sobre mí</title> 
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">    
-</head> 
-<body> 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-        <div class="container"> 
-            <a class="navbar-brand" href="#">Mi Sitio</a> 
-            <div class="navbar-nav"> 
-                <a class="nav-link" href="/">Inicio</a> 
-                <a class="nav-link active" href="/sobre-mi">Sobre mí</a> 
-            </div> 
-        </div> 
-    </nav>
-    
-    <div class="container mt-4"> 
-        <div class="card"> 
-            <div class="card-body"> 
-                <h1 class="card-title">Sobre mí</h1> 
-                <p><b>Nombre:</b> Juan Pérez</p> 
-                <p><b>Edad:</b> 22 años</p> 
-                <p><b>De dónde soy:</b> Corrientes, Argentina</p> 
-                <p><b>Me gustaría trabajar en:</b> Desarrollo de software</p> 
-                <p><b>Expectativas del curso:</b> Aprender Laravel</p> 
-                <p><b>Hobbies:</b> Programar y deportes</p> 
-                <a href="#" class="btn btn-primary mt-3">Descargar CV</a> 
-                <a href="#" class="btn btn-secondary mt-3">Contactar</a>
-            </div>
-            <div class="card mt-4"> 
-                <div class="card-body"> 
-                    <h2>Formulario de contacto</h2> 
-                    <form> 
-                        <div class="mb-3"> 
-                            <label class="form-label">Nombre</label> 
-                            <input type="text" class="form-control" placeholder="Ingrese su nombre"> 
-                        </div> 
-                        <div class="mb-3"> 
-                            <label class="form-label">Email</label> 
-                            <input type="email" class="form-control" placeholder="Ingrese su email"> 
-                        </div> 
-                        <div class="mb-3"> 
-                            <label class="form-label">Mensaje</label>
-                            <textarea class="form-control" rows="3"></textarea> 
-                        </div> 
-                        <button type="submit" class="btn btn-success"> Enviar mensaje </button> 
-                    </form> 
-                </div> 
-            </div> 
-        </div> 
-    </div>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-</body>
-</html> --}}

@@ -1,4 +1,4 @@
-<div {{ $attributes }} >
+<article {{ $attributes }} >
     <div class="row g-4 justify-content-center">
 
       <!-- Card Producto -->
@@ -27,4 +27,4 @@
       </div>
 
     </div>
-  </div>
+  </article>

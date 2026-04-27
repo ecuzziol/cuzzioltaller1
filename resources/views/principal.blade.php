@@ -25,7 +25,7 @@
             </button>
         </div>
         
-        <article class="mt-8">
+        <section class="mt-8">
             <div>
                 <label>Productos Destacados</label>
             </div>
@@ -52,7 +52,7 @@
                 class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
                 </x-product-item>
             </div>
-        </article>
+        </section>
 
 
     </section>

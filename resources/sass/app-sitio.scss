@@ -1,6 +1,29 @@
 @import 'tailwindcss';
 
+:root {
+  --footer-red-section-color: #e74c3c;
+}
 
+//general
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+.font-small {
+    font-size: 13px !important;
+}
+
+
+
+//header
 .header-section{
     display: flex;
     flex-direction: row;
@@ -96,3 +119,84 @@
     .btn-retro:hover::before {
       left: 100%;
     }
+
+
+
+//footer
+
+.footer-section{
+  background-color: var(--bs-body-color);
+  margin-top: 5rem;
+  
+  
+  a {color: #FFFFFF;}
+}
+
+.footer-red-separator{
+
+  padding: 35px 0;
+  background: var(--footer-red-section-color);
+  text-align: center !important;
+    
+  // @media (min-width: 768px) {
+  //     .social-icon {
+  //         margin: 0 15px;
+  //     }
+  // }
+
+  .social-icon {
+      display: inline-block;
+      margin: 0 7px;
+      font-size: 12px;
+      text-align: center;      
+      background: #ffffff;
+  }
+  .icon-circle {
+      // background: #0000001A;
+      border-radius: 100%;
+  }
+  .icon-40px {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+  }
+  .icon-inline.icon-lg {
+    vertical-align: -0.225em;
+    margin-top: 0.8em;
+  }
+  .social-icon svg {
+    fill: var(--footer-red-section-color);
+  }
+  .icon-lg {
+    font-size: 1.33333em;
+    line-height: .75em;
+    vertical-align: -0.0667em;
+  }
+  .icon-inline {
+    display: inline-block;
+    font-size: inherit;
+    height: 1.5em;
+    overflow: visible;
+    vertical-align: -0.125em;
+  }
+}
+
+.footer-container{
+  text-align: center;
+  
+  a {
+      color: var(--main-foreground);
+      -webkit-transition: all .4s ease;
+      -ms-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      -o-transition: all .4s ease;
+      transition: all .4s ease;
+      text-decoration: none;
+      color: #FFFFFF;
+  }
+  ul{
+    padding-left: 0px;
+  }
+
+}
