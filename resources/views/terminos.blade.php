@@ -2,7 +2,8 @@
     <x-slot:title>
         RetroStore - Terminos y Usos
         </x-slot>
-        <section class="container mx-auto w-50">
+         <section class="mx-auto w-10/12 md:w-8/12 lg:w-8/12 ">
+
 
             <h1 class="mb-4 text-center">Términos y Condiciones</h1>
             <p> Bienvenido a <strong>RetroStore</strong>. Al acceder y utilizar nuestro sitio web, aceptás los

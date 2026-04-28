@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Log;
 
 class ContactoController extends Controller
 {
-    public function procesar(Request $request) { 
+    public function procesarConsulta(Request $request) { 
         // dd($request->input('nombre'));
         // dd($request->input('email'));
         // dd($request->input('mensaje'));
@@ -17,7 +17,7 @@ class ContactoController extends Controller
         $nombre = $request->input('nombre'); 
         $email = $request->input('email'); 
         $mensaje = $request->input('mensaje');
-        return view('exito', [
+        return view('consulta-exito', [
             'nombre' => $nombre, 
             'email' => $email
         ]); 

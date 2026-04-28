@@ -19,7 +19,9 @@
     </div>
     <div class="container py-md-3 footer-container">
         <div class="row">
-            <div class="col col-md-4 col-sm-12">
+            {{-- <div>
+            </div> --}}
+            <div class="col-md-4 col-lg-4 col-sm-4 col-12">
                  <a class="js-accordion-toggle-mobile row" style="cursor: default;">
                     <div class="font-small text-uppercase font-weight-bold p-3">Categorías</div>
                  </a>
@@ -41,47 +43,34 @@
                         </li>
                     </ul>
             </div>
-            <div class="col col-md-4 col-sm-12">
+           <div class="col-md-4 col-lg-4 col-sm-4 col-12">
                 <a class="row" style="cursor: default;">
                     <div class="font-small text-uppercase font-weight-bold p-3">Contácto</div>
                  </a>
                   <ul class="list py-2 font-small">
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=consolas">Consolas</a>
+                            <a class="footer-menu-link" href="/Consultas">Consultas</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=videojuegos">Videojuegos</a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo">Productos</a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=repuestos">Repuestos</a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=accesorios">Accesorios</a>
+                            <a href="https://wa.me/543794632222" class="footer-menu-link">
+                                +543794632222
+                            </a>
                         </li>
                     </ul>
             </div>
-            <div class="col col-md-4 col-sm-12">
+            <div class="col-md-4 col-lg-4 col-sm-4 col-12">
                  <a class="row" style="cursor: default;">
-                    <div class="font-small text-uppercase font-weight-bold p-3">Ayuda</div>
+                    <div class="font-small text-uppercase font-weight-bold p-3">Información</div>
                  </a>
                   <ul class="list py-2 font-small">
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=consolas">Consolas</a>
+                            <a class="footer-menu-link" href="/quienes-somos">Quienes Somos</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=videojuegos">Videojuegos</a>
+                            <a class="footer-menu-link" href="/comercializacion">Comercialización</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo">Productos</a>
-                        </li>
-                        <li class="footer-menu-item ">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=repuestos">Repuestos</a>
-                        </li>
-                        <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=accesorios">Accesorios</a>
+                            <a class="footer-menu-link" href="/terminos">Términos y condiciones</a>
                         </li>
                     </ul>
             </div>

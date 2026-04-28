@@ -24,4 +24,4 @@ Route::get('/catalogo', function () {
 Route::get('/consultas', function () { 
     return view('consultas'); 
 });
-Route::post('/contacto', [ContactoController::class, 'procesar']);
+Route::post('/contacto', [ContactoController::class, 'procesarConsulta']);
