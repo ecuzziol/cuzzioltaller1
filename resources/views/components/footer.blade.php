@@ -19,8 +19,6 @@
     </div>
     <div class="container py-md-3 footer-container">
         <div class="row">
-            {{-- <div>
-            </div> --}}
             <div class="col-md-4 col-lg-4 col-sm-4 col-12">
                  <a class="js-accordion-toggle-mobile row" style="cursor: default;">
                     <div class="font-small text-uppercase font-weight-bold p-3">Categorías</div>

@@ -5,11 +5,16 @@
         {{-- <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap-grid.min.css') }}">         
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap-utilities.min.css') }}">         
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap-reboot.min.css') }}">          --}}
+        <link rel="icon" type="image/png" href="{{ asset('img/logo_x.png') }}">
         @vite(['resources/css/app.css', 'resources/sass/app-sitio.scss', 'resources/js/app.js', 'resources/js/jquery-4.0.0.min.js'])
     </head>
     <body>
-        <x-header />
-        <x-navbar :active="$activePage"/>
+        <div id="mainHeader" class="sticky-top header-wrapper">
+            <x-header />
+            <x-navbar :active="$activePage"/>
+        </div>
+        {{-- <x-header />
+        <x-navbar :active="$activePage"/> --}}
 
         {{ $slot }}
         <x-footer />
