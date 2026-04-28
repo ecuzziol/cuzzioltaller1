@@ -1,51 +1,57 @@
 <x-layout active-page="contacto">
     <x-slot:title>
         RetroStore - Contacto
-    </x-slot>
+        </x-slot>
+        <!-- Información de contacto -->
+        <section class="container mx-auto w-50">
 
+            <h3 class="mb-4 text-center">Contacto</h3>
+            <p><strong>Empresa:</strong> RetroStore</p>
+            <p><strong>Titular:</strong> Eric Cuzziol</p>
+            <p><strong>Dirección:</strong> San Martin 1313</p>
+            <p><strong>Teléfono:</strong> <a href="https://wa.me/543794632222">+54 379 4632222</a> </p>
+           
+ <hr>
+        </section>
+         
+
+        <section class="container mx-auto w-50">
+           
+            <h3 class="mb-4  mt-4 text-center">Envíanos tu consulta</h3>
+            
+            <p class=""> Podés comunicarte con nosotros por teléfono o enviarnos tu consulta a través del
+                formulario. </p>
+            <form>
+                <div class="mb-3"> <label for="nombre" class="form-label">Nombre</label> 
+                    <input type="text"
+                        class="form-control" id="nombre" placeholder="Tu nombre" required> </div>
+                <div class="mb-3"> <label for="email" class="form-label">Correo electrónico</label> 
+                    <input type="email"
+                        class="form-control" id="email" placeholder="nombre@email.com" required>
+                </div>
+                <div class="mb-3"> <label for="mensaje" class="form-label">Mensaje</label> 
+                    <textarea
+                        class="form-control" id="mensaje" rows="4" placeholder="Escribí tu consulta..."
+                        required></textarea> </div> 
+                        <button type="submit" class="btn btn-primary w-100"> Enviar consulta </button>
+            </form>
+        </section>
+        <!-- <div class="col-12 col-md-7">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h3 class="card-title mb-4">Envíanos tu consulta</h3>
+                    <form>
+                        <div class="mb-3"> <label for="nombre" class="form-label">Nombre</label> <input type="text"
+                                class="form-control" id="nombre" placeholder="Tu nombre" required> </div>
+                        <div class="mb-3"> <label for="email" class="form-label">Correo electrónico</label> <input
+                                type="email" class="form-control" id="email" placeholder="nombre@email.com" required>
+                        </div>
+                        <div class="mb-3"> <label for="mensaje" class="form-label">Mensaje</label> <textarea
+                                class="form-control" id="mensaje" rows="4" placeholder="Escribí tu consulta..."
+                                required></textarea> </div> <button type="submit" class="btn btn-primary w-100"> Enviar
+                            consulta </button>
+                    </form>
+                </div>
+            </div>
+        </div> -->
 </x-layout>
-
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head> 
-    <title>Contacto</title> 
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">    
-</head> 
-<body> 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-        <div class="container"> 
-            <a class="navbar-brand" href="#">Mi Sitio</a> 
-            <div class="navbar-nav"> 
-                <a class="nav-link" href="/">Inicio</a> 
-                <a class="nav-link active" href="/sobre-mi">Sobre mí</a> 
-            </div> 
-        </div> 
-    </nav>
-    
-    <div class="container mt-4"> 
-        <div class="card mt-4"> 
-            <div class="card-body"> 
-                <h2>Formulario de contacto</h2> 
-                <form action="{{ url('/contacto') }}" method="POST"> 
-                    @csrf
-                    <div class="mb-3"> 
-                        <label class="form-label">Nombre</label> 
-                        <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre"> 
-                    </div> 
-                    <div class="mb-3"> 
-                        <label class="form-label">Email</label> 
-                        <input type="email" name="email" class="form-control" placeholder="Ingrese su email"> 
-                    </div> 
-                    <div class="mb-3"> 
-                        <label class="form-label">Mensaje</label>
-                        <textarea class="form-control" name="mensaje" rows="3"></textarea> 
-                    </div> 
-                    <button type="submit" class="btn btn-success"> Enviar mensaje </button> 
-                </form> 
-            </div> 
-        </div> 
-    
-    </div>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-</body>
-</html> --}}

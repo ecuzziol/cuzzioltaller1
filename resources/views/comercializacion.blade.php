@@ -1,9 +1,9 @@
 <x-layout active-page="comercializacion">
     <x-slot:title>
-        RetroStore - Comercializacion
-        </x-slot>
+    RetroStore - Comercializacion
+    </x-slot>
         <section class="container">
-            <h2 class="mb-4 text-center">Comercialización</h2>
+            <h2 class="mb-4 text-center">¿Cómo Comprar?</h2>
             <p> En <strong>RetroStore</strong> trabajamos para ofrecerte una experiencia de compra simple, segura y
                 transparente. A continuación, te detallamos toda la información necesaria sobre nuestros medios de pago,
                 formas de entrega y condiciones de compra. </p>

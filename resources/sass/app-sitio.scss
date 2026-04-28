@@ -4,6 +4,17 @@
   --footer-red-section-color: #e74c3c;
 }
 
+.btn{
+  background-color: var(--bs-body-color);
+    // color: white;
+  
+}
+.btn:hover{
+    color: var(--bs-btn-hover-color);
+    background-color: var(--footer-red-section-color);
+    border-color: var(--footer-red-section-color);
+  }
+
 //general
 
 .font-weight-bold {
