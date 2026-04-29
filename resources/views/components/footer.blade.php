@@ -163,6 +163,13 @@
 
         </div>
 
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 RetroStore. Todos los derechos reservados.</span>
+            <span>Desarrollado por: <strong>Eric Cuzziol</strong></span>
+        </div>
+
     </div>
     {{-- <div class="container">
         <div class="row align-items-center py-4">
