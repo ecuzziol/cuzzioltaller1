@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\EnumCategoria;
 use App\Models\EnumSubcategoria;
 use App\Models\Producto;
+use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
@@ -47,9 +48,30 @@ class ProductoController extends Controller
         ];
     }
 
-    public function ObtenerTodos()
+    public function ObtenerTodos(Request $request)
     {
-        return view('catalogo', ['productos' => collect(self::productos())]);
+        $categoria    = $request->query('Categoria');
+        $subcategoria = $request->query('Subcategoria');
+
+        $productos = collect(self::productos());
+
+        if ($categoria) {
+            $productos = $productos->filter(
+                fn($p) => $p->Categoria === EnumCategoria::from($categoria)
+            );
+        }
+
+        if ($subcategoria) {
+            $productos = $productos->filter(
+                fn($p) => $p->SubCategoria === EnumSubcategoria::from($subcategoria)
+            );
+        }
+
+        return view('catalogo', [
+            'productos'        => $productos->values(),
+            'categoriaActiva'  => $categoria,
+            'subcategoriaActiva' => $subcategoria,
+        ]);
     }
 
     public function Buscar(string $search_term)

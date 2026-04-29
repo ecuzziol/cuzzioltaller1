@@ -4,8 +4,8 @@
     </x-slot>
 
     @php
-        $categorias      = $productos->groupBy(fn($p) => $p->Categoria->value);
-        $categoriaCases  = \App\Models\EnumCategoria::cases();
+        $categorias     = $productos->groupBy(fn($p) => $p->Categoria->value);
+        $categoriaCases = \App\Models\EnumCategoria::cases();
     @endphp
 
     <div class="container mt-4">
@@ -28,15 +28,17 @@
 
                     <ul class="catalogo-sidebar__list">
                         <li>
-                            <button class="catalogo-filter-btn active" data-categoria="todas">
+                            <a href="/catalogo"
+                               class="catalogo-filter-btn {{ is_null($categoriaActiva) ? 'active' : '' }}">
                                 <span class="catalogo-filter-btn__icon">&#9733;</span> Todas
-                            </button>
+                            </a>
                         </li>
                         @foreach ($categoriaCases as $case)
                             <li>
-                                <button class="catalogo-filter-btn" data-categoria="{{ $case->value }}">
+                                <a href="/catalogo?Categoria={{ $case->value }}"
+                                   class="catalogo-filter-btn {{ $categoriaActiva === $case->value ? 'active' : '' }}">
                                     <span class="catalogo-filter-btn__icon">&#8250;</span> {{ $case->value }}
-                                </button>
+                                </a>
                             </li>
                         @endforeach
                     </ul>
@@ -44,15 +46,15 @@
                     <hr class="catalogo-sidebar__divider">
 
                     <p class="catalogo-sidebar__count">
-                        Mostrando <span id="product-count">{{ $productos->count() }}</span> productos
+                        Mostrando {{ $productos->count() }} productos
                     </p>
                 </div>
             </aside>
 
             {{-- ── Product grid ──────────────────────────────────── --}}
             <main class="col-lg-9">
-                @foreach ($categorias as $categoria => $items)
-                    <section class="mt-3 catalogo-section" data-categoria="{{ $categoria }}">
+                @forelse ($categorias as $categoria => $items)
+                    <section class="mt-3">
                         <h5 class="main-section-subtitle mb-3">{{ $categoria }}</h5>
                         <div class="row">
                             @foreach ($items as $producto)
@@ -66,7 +68,9 @@
                             @endforeach
                         </div>
                     </section>
-                @endforeach
+                @empty
+                    <p class="text-secondary mt-5 text-center">No se encontraron productos para esta categoría.</p>
+                @endforelse
             </main>
 
         </div>
@@ -83,56 +87,20 @@
         <div class="offcanvas-body">
             <ul class="catalogo-sidebar__list">
                 <li>
-                    <button class="catalogo-filter-btn active" data-categoria="todas">
+                    <a href="/catalogo"
+                       class="catalogo-filter-btn {{ is_null($categoriaActiva) ? 'active' : '' }}">
                         <span class="catalogo-filter-btn__icon">&#9733;</span> Todas
-                    </button>
+                    </a>
                 </li>
                 @foreach ($categoriaCases as $case)
                     <li>
-                        <button class="catalogo-filter-btn" data-categoria="{{ $case->value }}">
+                        <a href="/catalogo?Categoria={{ $case->value }}"
+                           class="catalogo-filter-btn {{ $categoriaActiva === $case->value ? 'active' : '' }}">
                             <span class="catalogo-filter-btn__icon">&#8250;</span> {{ $case->value }}
-                        </button>
+                        </a>
                     </li>
                 @endforeach
             </ul>
         </div>
     </div>
-
-    <script>
-        (function () {
-            const sections   = document.querySelectorAll('.catalogo-section');
-            const filterBtns = document.querySelectorAll('.catalogo-filter-btn');
-            const countEl    = document.getElementById('product-count');
-
-            function applyFilter(categoria) {
-                let total = 0;
-
-                sections.forEach(function (section) {
-                    const match = categoria === 'todas' || section.dataset.categoria === categoria;
-                    section.style.display = match ? '' : 'none';
-                    if (match) total += section.querySelectorAll('.product-carousel-item, article').length;
-                });
-
-                if (countEl) countEl.textContent = total;
-            }
-
-            filterBtns.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    const categoria = this.dataset.categoria;
-
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    document.querySelectorAll('[data-categoria="' + categoria + '"].catalogo-filter-btn')
-                             .forEach(b => b.classList.add('active'));
-
-                    applyFilter(categoria);
-
-                    // close offcanvas if open
-                    const offcanvas = document.getElementById('filtrosOffcanvas');
-                    if (offcanvas && offcanvas.classList.contains('show')) {
-                        bootstrap.Offcanvas.getInstance(offcanvas)?.hide();
-                    }
-                });
-            });
-        })();
-    </script>
 </x-layout>
