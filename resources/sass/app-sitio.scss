@@ -291,6 +291,43 @@
     }
 }
 
+// shared page content styles
+.page-text {
+    color: #9ca3af;
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+
+    strong {
+        color: #e5e7eb;
+    }
+}
+
+.page-list {
+    color: #9ca3af;
+    padding-left: 1.25rem;
+    line-height: 1.9;
+
+    strong {
+        color: #e5e7eb;
+    }
+}
+
+.terminos-section {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #1f2937;
+
+    &--last {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .contacto-card__title {
+        margin-bottom: 0.75rem;
+    }
+}
+
 // contacto
 .contacto-card {
     background: #111827;
