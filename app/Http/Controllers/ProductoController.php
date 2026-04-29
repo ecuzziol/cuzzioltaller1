@@ -51,4 +51,23 @@ class ProductoController extends Controller
     {
         return view('catalogo', ['productos' => collect(self::productos())]);
     }
+
+    public function Filtrar(?string $categoria = null, ?string $subcategoria = null)
+    {
+        $productos = collect(self::productos());
+
+        if ($categoria !== null) {
+            $productos = $productos->filter(
+                fn($p) => $p->Categoria === EnumCategoria::from($categoria)
+            );
+        }
+
+        if ($subcategoria !== null) {
+            $productos = $productos->filter(
+                fn($p) => $p->SubCategoria === EnumSubcategoria::from($subcategoria)
+            );
+        }
+
+        return $productos->values();
+    }
 }
