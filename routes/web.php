@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,9 +19,7 @@ Route::get('/comercializacion', function () {
 Route::get('/terminos', function () { 
     return view('terminos'); 
 });
-Route::get('/catalogo', function () { 
-    return view('catalogo'); 
-});
+Route::get('/catalogo', [ProductoController::class, 'ObtenerTodos']);
 Route::get('/consultas', function () { 
     return view('consultas'); 
 });

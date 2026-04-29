@@ -10,6 +10,7 @@ class Producto
     public float $Precio;
     public EnumCategoria $Categoria;
     public EnumSubcategoria $SubCategoria;
+    public string $Imagen;
 
     public function __construct(
         string $Nombre,
@@ -17,7 +18,8 @@ class Producto
         string $Marca,
         float $Precio,
         EnumCategoria $Categoria,
-        EnumSubcategoria $SubCategoria
+        EnumSubcategoria $SubCategoria,
+        string $Imagen
     ) {
         $this->Nombre = $Nombre;
         $this->Descripcion = $Descripcion;
@@ -25,5 +27,6 @@ class Producto
         $this->Precio = $Precio;
         $this->Categoria = $Categoria;
         $this->SubCategoria = $SubCategoria;
+        $this->Imagen = $Imagen;
     }
 }
