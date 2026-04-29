@@ -105,10 +105,14 @@
 
 
 //main
-.main-section-subtitle{
+.main-section-subtitle {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
     color: var(--footer-red-section-color);
-    border-color: black;
-    text-shadow: 0.5px 0.5px 0.5px orangered;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--footer-red-section-color);
+    display: inline-block;
 }
 
 
