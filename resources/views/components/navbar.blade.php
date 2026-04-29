@@ -1,49 +1,39 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-8"> 
-            <div class="navbar-nav self-center justify-center w-full"> 
-                <a class="nav-link @if($active == 'inicio') active @endif" href="/">Inicio</a> 
-                <a class="nav-link @if($active == 'quienessomos') active @endif" href="/quienes-somos">Quienes Somos</a> 
-                <a class="nav-link @if($active == 'comercializacion') active @endif" href="/comercializacion">Comercialización</a> 
-                <a class="nav-link @if($active == 'contacto') active @endif" href="/contacto">Contacto</a> 
-                <a class="nav-link @if($active == 'terminos') active @endif" href="/terminos">Terminos y Usos</a> 
-                <a class="nav-link @if($active == 'catalogo') active @endif" href="/catalogo">Productos</a> 
-                <a class="nav-link @if($active == 'consultas') active @endif" href="/consultas">Consultas</a> 
-            </div> 
-</nav>
-{{-- 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark w-full">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-    data-bs-target="#navbarSupportedContent" 
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand d-lg-none" href="/">RetroStore</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+            <ul class="navbar-nav gap-1">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-retro @if($active == 'inicio') active @endif" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-retro @if($active == 'quienessomos') active @endif" href="/quienes-somos">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-retro @if($active == 'catalogo') active @endif" href="/catalogo">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-retro @if($active == 'comercializacion') active @endif" href="/comercializacion">Comercialización</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-retro @if($active == 'terminos') active @endif" href="/terminos">Términos y Usos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-retro @if($active == 'consultas') active @endif" href="/consultas">Consultas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-retro @if($active == 'contacto') active @endif" href="/contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+
     </div>
-  </div>
-</nav> --}}
+</nav>

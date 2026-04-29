@@ -143,8 +143,46 @@
 
 .navbar {
     transition: all 0.3s ease;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+// Tailwind's .collapse sets visibility:collapse which breaks Bootstrap's
+// navbar collapse component. Override to restore Bootstrap's behaviour.
+.navbar-collapse {
+    visibility: visible !important;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    background: linear-gradient(90deg, #e74c3c, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-link-retro {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: 8px;
+    color: #9ca3af !important;
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+        color: #f9fafb !important;
+        background: rgba(255, 255, 255, 0.07);
+    }
+
+    &.active {
+        color: #ffffff !important;
+        background: rgba(231, 76, 60, 0.15);
+        border-bottom: 2px solid var(--footer-red-section-color);
+    }
 }
 
 .header-wrapper.shrink .header-section {
