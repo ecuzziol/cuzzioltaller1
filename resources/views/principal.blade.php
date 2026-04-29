@@ -5,7 +5,6 @@
 
     <div class="container mt-5">
 
-        {{-- ── Hero carousel ───────────────────────────────────────── --}}
         <div class="home-carousel-wrapper mb-5">
             <div id="carouselPrincipal" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -31,8 +30,6 @@
                 </button>
             </div>
         </div>
-
-        {{-- ── Feature highlights ──────────────────────────────────── --}}
 
         <div class="row g-3 mb-5">
             <div class="col-6 col-md-3">
@@ -65,7 +62,6 @@
             </div>
         </div>
 
-        {{-- ── Categorías ───────────────────────────────────────────── --}}
         <section class="mt-5 mb-2">
             <h5 class="main-section-subtitle mb-4">Explorar por Categoría</h5>
             <div class="row g-3">
@@ -80,7 +76,6 @@
             </div>
         </section>
 
-        {{-- ── Productos Destacados ─────────────────────────────────── --}}
         <section class="mt-5">
             <h5 class="main-section-subtitle mb-3">Productos Destacados</h5>
             <div class="row">
@@ -96,7 +91,6 @@
             </div>
         </section>
 
-        {{-- ── Últimos Ingresos ────────────────────────────────────── --}}
         <section class="mt-5">
             <h5 class="main-section-subtitle mb-3">Últimos Ingresos</h5>
             <div class="row">
@@ -112,7 +106,6 @@
             </div>
         </section>
 
-        {{-- ── CTA banner ───────────────────────────────────────────── --}}
         <div class="home-cta mt-5">
             <div>
                 <h4 class="home-cta__title">¿Buscás algo en particular?</h4>

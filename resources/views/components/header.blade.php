@@ -1,13 +1,11 @@
 <div class="header-section">
 
-    {{-- Logo --}}
     <div class="header-logo-section">
         <a href="/">
             <img class="header-logo" src="{{ asset('img/logo_x.png') }}" alt="RetroStore" />
         </a>
     </div>
 
-    {{-- Search --}}
     <div class="header-search-section">
         <div class="header-search-wrapper">
             <i class="bi bi-search header-search-icon"></i>
@@ -19,7 +17,6 @@
         </div>
     </div>
 
-    {{-- Cart --}}
     <div class="header-user-section">
         <a href="#" class="header-cart-btn">
             <i class="bi bi-cart3 header-cart-btn__icon"></i>

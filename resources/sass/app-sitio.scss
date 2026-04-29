@@ -6,16 +6,12 @@
 
 .btn{
   background-color: var(--bs-body-color);
-    // color: white;
-  
 }
 .btn:hover{
     color: var(--bs-btn-hover-color);
     background-color: var(--footer-red-section-color);
     border-color: var(--footer-red-section-color);
   }
-
-//general
 
 .font-weight-bold {
     font-weight: 700 !important;
@@ -32,9 +28,6 @@
     font-size: 13px !important;
 }
 
-
-
-// header
 .header-wrapper {
     transition: all 0.3s ease;
 }
@@ -148,8 +141,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-// Tailwind's .collapse sets visibility:collapse which breaks Bootstrap's
-// navbar collapse component. Override to restore Bootstrap's behaviour.
 .navbar-collapse {
     visibility: visible !important;
 }
@@ -199,9 +190,6 @@
     height: 36px;
 }
 
-
-
-//main
 .main-section-subtitle {
     font-weight: 700;
     font-size: 1.1rem;
@@ -212,8 +200,6 @@
     display: inline-block;
 }
 
-
-// product-item
 
     .card-retro {
       background: #111827;
@@ -243,7 +229,6 @@
       font-weight: bold;
     }
 
-    /* Botón con estilo neón animado */
     .btn-retro {
       background: linear-gradient(45deg, #06b6d4, #9333ea);
       border: none;
@@ -275,7 +260,6 @@
 
 
 
-// search banner
 .search-banner {
     display: flex;
     align-items: center;
@@ -315,7 +299,6 @@
     }
 }
 
-// catalogo sidebar
 .catalogo-sidebar {
     background: #111827;
     border: 1px solid #1f2937;
@@ -405,7 +388,6 @@
     }
 }
 
-// principal / home
 .home-carousel-wrapper {
     overflow: hidden;
     border-radius: 16px;
@@ -519,7 +501,6 @@
     }
 }
 
-// page title
 .page-title {
     text-align: center;
     font-weight: 800;
@@ -546,7 +527,6 @@
     }
 }
 
-// shared page content styles
 .page-text {
     color: #9ca3af;
     line-height: 1.75;
@@ -583,7 +563,6 @@
     }
 }
 
-// contacto
 .contacto-card {
     background: #111827;
     border: 1px solid #1f2937;
@@ -648,6 +627,14 @@
     }
 }
 
+.team-avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 2px solid #374151;
+    margin-bottom: 0.5rem;
+}
+
 .contacto-card .form-label {
     color: #d1d5db;
     font-size: 0.82rem;
@@ -678,8 +665,6 @@
     border: 1px solid #1f2937;
 }
 
-//footer
-
 .footer-section{
   background-color: var(--bs-body-color);
   margin-top: 5rem;
@@ -693,12 +678,6 @@
   padding: 35px 0;
   background: var(--footer-red-section-color);
   text-align: center !important;
-    
-  // @media (min-width: 768px) {
-  //     .social-icon {
-  //         margin: 0 15px;
-  //     }
-  // }
 
   .social-icon {
       display: inline-block;
@@ -708,7 +687,6 @@
       background: #ffffff;
   }
   .icon-circle {
-      // background: #0000001A;
       border-radius: 100%;
   }
   .icon-40px {

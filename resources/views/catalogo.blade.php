@@ -21,7 +21,6 @@
             <h2 class="mb-4 text-center">Productos</h2>
         @endif
 
-        {{-- Mobile: open offcanvas button --}}
         <div class="d-lg-none mb-3">
             <button class="btn btn-retro w-100" type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#filtrosOffcanvas" aria-controls="filtrosOffcanvas">
@@ -31,7 +30,6 @@
 
         <div class="row align-items-start">
 
-            {{-- ── Sidebar (desktop) ─────────────────────────────── --}}
             <aside class="col-lg-3 d-none d-lg-block" style="align-self: flex-start; position: sticky; top: 5rem;">
                 <div class="catalogo-sidebar">
                     <h6 class="catalogo-sidebar__title">Categorías</h6>
@@ -61,7 +59,6 @@
                 </div>
             </aside>
 
-            {{-- ── Product grid ──────────────────────────────────── --}}
             <main class="col-lg-9">
                 @forelse ($categorias as $categoria => $items)
                     <section class="mt-3">
@@ -86,7 +83,6 @@
         </div>
     </div>
 
-    {{-- ── Offcanvas (mobile) ────────────────────────────────────── --}}
     <div class="offcanvas offcanvas-start catalogo-offcanvas" tabindex="-1"
          id="filtrosOffcanvas" aria-labelledby="filtrosOffcanvasLabel">
         <div class="offcanvas-header">

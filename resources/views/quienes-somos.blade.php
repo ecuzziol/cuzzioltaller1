@@ -8,7 +8,6 @@
 
         <div class="row g-4">
 
-            {{-- About text --}}
             <div class="col-12 col-lg-8">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Nuestra historia</h4>
@@ -32,8 +31,7 @@
                 </div>
             </div>
 
-            {{-- Team --}}
-            <div class="col-12 col-lg-4">
+            <div id="team-section" class="col-12 col-lg-4">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Nuestro equipo</h4>
                     <p class="page-text">Detrás de RetroStore hay un equipo reducido pero comprometido, formado por personas que trabajan
@@ -41,14 +39,17 @@
 
                     <ul class="contacto-info-list mt-3">
                         <li>
+                            <img src="{{ asset('img/team-1.jpg') }}" class="team-avatar" alt="Dueño y fundador">
                             <span class="contacto-info-list__label">Dueño y fundador</span>
                             <span>Impulsa la visión del negocio y define la estrategia general.</span>
                         </li>
                         <li>
+                            <img src="{{ asset('img/team-2.jpg') }}" class="team-avatar" alt="Atención en local físico">
                             <span class="contacto-info-list__label">Atención en local físico</span>
                             <span>Encargado de la atención directa al cliente y la gestión del stock.</span>
                         </li>
                         <li>
+                            <img src="{{ asset('img/team-3.jpg') }}" class="team-avatar" alt="Ventas online">
                             <span class="contacto-info-list__label">Ventas online</span>
                             <span>Administra la tienda digital, responde consultas y gestiona los pedidos.</span>
                         </li>
