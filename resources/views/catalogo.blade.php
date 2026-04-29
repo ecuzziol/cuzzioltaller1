@@ -18,7 +18,7 @@
                 <a href="/catalogo" class="search-banner__clear">&#10005; Limpiar</a>
             </div>
         @else
-            <h2 class="mb-4 text-center">Productos</h2>
+            <h2 class="page-title">Productos</h2>
         @endif
 
         <div class="d-lg-none mb-3">
