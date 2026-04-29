@@ -627,6 +627,23 @@
     }
 }
 
+.payment-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+}
+
+.payment-logo {
+    height: 26px;
+    width: auto;
+    background: #fff;
+    border-radius: 4px;
+    padding: 2px 5px;
+    object-fit: contain;
+}
+
 .team-avatar {
     width: 68px;
     height: 68px;

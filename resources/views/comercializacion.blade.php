@@ -8,23 +8,37 @@
 
         <div class="row g-4">
 
-            {{-- Medios de pago --}}
             <div class="col-12 col-md-6">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Medios de pago</h4>
                     <p class="page-text">Contamos con múltiples opciones para que puedas elegir la que más te convenga:</p>
                     <ul class="page-list">
-                        <li>Tarjetas de crédito y débito</li>
+                        <li id="tarjetas">
+                            Tarjetas de crédito y débito
+                            <div class="payment-logos">
+                                @foreach (['visa', 'mastercard', 'amex', 'cabal', 'banelco', 'link', 'nativa', 'cencosud', 'provincianet', 'tarjetanaranja'] as $logo)
+                                    <img src="{{ asset('img/comercializacion/mediospagos/' . $logo . '.png') }}"
+                                         alt="{{ $logo }}"
+                                         class="payment-logo">
+                                @endforeach
+                            </div>
+                        </li>
                         <li>Transferencia bancaria</li>
                         <li>Pago en efectivo (solo en local físico)</li>
-                        <li>Mercado Pago</li>
+                        <li id="mercadopago">
+                            Mercado Pago
+                            <div class="payment-logos">
+                                <img src="{{ asset('img/comercializacion/mediospagos/mercadopago.png') }}"
+                                     alt="Mercado Pago"
+                                     class="payment-logo">
+                            </div>
+                        </li>
                     </ul>
                     <p class="page-text mt-3">También ofrecemos promociones y financiación en cuotas sin interés en productos seleccionados,
                         sujetas a disponibilidad y condiciones vigentes.</p>
                 </div>
             </div>
 
-            {{-- Formas de entrega --}}
             <div class="col-12 col-md-6">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Formas de entrega</h4>
@@ -43,7 +57,6 @@
                 </div>
             </div>
 
-            {{-- Proceso de compra --}}
             <div class="col-12 col-md-6">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Proceso de compra</h4>
@@ -59,7 +72,6 @@
                 </div>
             </div>
 
-            {{-- Información adicional --}}
             <div class="col-12 col-md-6">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Información adicional</h4>
