@@ -4,9 +4,7 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('principal');
-});
+Route::get('/', [ProductoController::class, 'ObtenerPrincipal']);
 Route::get('/quienes-somos', function () {
     return view('quienes-somos');
 });
