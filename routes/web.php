@@ -20,6 +20,7 @@ Route::get('/terminos', function () {
     return view('terminos'); 
 });
 Route::get('/catalogo', [ProductoController::class, 'ObtenerTodos']);
+Route::get('/catalogo/buscar', [ProductoController::class, 'BuscarVista']);
 Route::get('/consultas', function () { 
     return view('consultas'); 
 });

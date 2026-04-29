@@ -6,10 +6,20 @@
     @php
         $categorias     = $productos->groupBy(fn($p) => $p->Categoria->value);
         $categoriaCases = \App\Models\EnumCategoria::cases();
+        $term           = $searchTerm ?? null;
     @endphp
 
     <div class="container mt-4">
-        <h2 class="mb-4 text-center">Productos</h2>
+        @if ($term)
+            <div class="search-banner mb-4">
+                <span class="search-banner__label">Resultados para:</span>
+                <span class="search-banner__term">&ldquo;{{ $term }}&rdquo;</span>
+                <span class="search-banner__count">{{ $productos->count() }} producto(s)</span>
+                <a href="/catalogo" class="search-banner__clear">&#10005; Limpiar</a>
+            </div>
+        @else
+            <h2 class="mb-4 text-center">Productos</h2>
+        @endif
 
         {{-- Mobile: open offcanvas button --}}
         <div class="d-lg-none mb-3">

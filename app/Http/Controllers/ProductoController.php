@@ -74,6 +74,19 @@ class ProductoController extends Controller
         ]);
     }
 
+    public function BuscarVista(Request $request)
+    {
+        $term     = trim($request->query('q', ''));
+        $productos = $term ? $this->Buscar($term) : collect(self::productos());
+
+        return view('catalogo', [
+            'productos'          => $productos,
+            'categoriaActiva'    => null,
+            'subcategoriaActiva' => null,
+            'searchTerm'         => $term,
+        ]);
+    }
+
     public function Buscar(string $search_term)
     {
         $term = mb_strtolower($search_term);
