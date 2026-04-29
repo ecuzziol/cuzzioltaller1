@@ -22,7 +22,7 @@
         <div class="row align-items-start">
 
             {{-- ── Sidebar (desktop) ─────────────────────────────── --}}
-            <aside class="col-lg-3 d-none d-lg-block">
+            <aside class="col-lg-3 d-none d-lg-block" style="align-self: flex-start; position: sticky; top: 5rem;">
                 <div class="catalogo-sidebar">
                     <h6 class="catalogo-sidebar__title">Categorías</h6>
 

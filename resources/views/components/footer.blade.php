@@ -25,19 +25,19 @@
                  </a>
                     <ul class="list py-2 font-small">
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=consolas">Consolas</a>
+                            <a class="footer-menu-link" href="/catalogo?Categoria=Consolas">Consolas</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=videojuegos">Videojuegos</a>
+                            <a class="footer-menu-link" href="/catalogo?Categoria=Videojuegos">Videojuegos</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=repuestos">Repuestos</a>
+                            <a class="footer-menu-link" href="/catalogo?Categoria=Accesorios">Repuestos</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo?p_cat=accesorios">Accesorios</a>
+                            <a class="footer-menu-link" href="/catalogo?Categoria=Repuestos">Accesorios</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo">Productos</a>
+                            <a class="footer-menu-link" href="/catalogo">Todos los productos</a>
                         </li>
                     </ul>
             </div>
