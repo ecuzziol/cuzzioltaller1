@@ -2,93 +2,29 @@
     <x-slot:title>
         RetroStore - Productos
     </x-slot>
+
     <section class="container">
-         <h2 class="mb-4 text-center">Productos</h2>
-        <section class="mt-12">
-            <div>
-                <h5 class="main-section-subtitle">Productos Destacados</h5>
-            </div>
-            <div class="mt-2 lg:flex justify-between">
-                
-                <x-product-item price="39.999" 
-                product-title="God of War 3" 
-                product-console="PS3"
-                image-source="{{ asset('img/god_3.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
+        <h2 class="mb-4 text-center">Productos</h2>
 
-                 <x-product-item price="55.555" 
-                product-title="Ghost of Tshunima" 
-                product-console="PS5"
-                image-source="{{ asset('img/ghost_tshunima.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
+        @php
+            $categorias = $productos->groupBy(fn($p) => $p->Categoria->value);
+        @endphp
 
-                 <x-product-item price="45.000" 
-                product-title="Crash It's about time" 
-                product-console="Ps4"
-                image-source="{{ asset('img/crash.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-            </div>
-        </section>
-        <section class="mt-12">
-            <div>
-                <h5 class="main-section-subtitle">Últimos Ingresos</h5>
-            </div>
-            <div class="mt-2 lg:flex justify-between">
-                
-                <x-product-item price="39.999" 
-                product-title="God of War 3" 
-                product-console="PS3"
-                image-source="{{ asset('img/god_3.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="55.555" 
-                product-title="Ghost of Tshunima" 
-                product-console="PS5"
-                image-source="{{ asset('img/ghost_tshunima.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="45.000" 
-                product-title="Crash It's about time" 
-                product-console="Ps4"
-                image-source="{{ asset('img/crash.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-            </div>
-        </section>
-        <section class="mt-12">
-            <div>
-                <h5 class="main-section-subtitle">Novedades</h5>
-            </div>
-            <div class="mt-2 lg:flex justify-between">
-                
-                <x-product-item price="39.999" 
-                product-title="God of War 3" 
-                product-console="PS3"
-                image-source="{{ asset('img/god_3.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="55.555" 
-                product-title="Ghost of Tshunima" 
-                product-console="PS5"
-                image-source="{{ asset('img/ghost_tshunima.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="45.000" 
-                product-title="Crash It's about time" 
-                product-console="Ps4"
-                image-source="{{ asset('img/crash.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-            </div>
-        </section>
-
-
+        @foreach ($categorias as $categoria => $items)
+            <section class="mt-5">
+                <h5 class="main-section-subtitle mb-3">{{ $categoria }}</h5>
+                <div class="row">
+                    @foreach ($items as $producto)
+                        <x-product-item
+                            :price="$producto->Precio"
+                            :product-title="$producto->Nombre"
+                            :product-console="$producto->SubCategoria->value"
+                            :image-source="asset('img/' . $producto->Imagen)"
+                            class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                        </x-product-item>
+                    @endforeach
+                </div>
+            </section>
+        @endforeach
     </section>
 </x-layout>

@@ -49,6 +49,6 @@ class ProductoController extends Controller
 
     public function ObtenerTodos()
     {
-        return view('catalogo', ['productos' => self::productos()]);
+        return view('catalogo', ['productos' => collect(self::productos())]);
     }
 }
