@@ -2,115 +2,152 @@
     <x-slot:title>
         RetroStore
     </x-slot>
-    <section class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="{{ asset('img/imagen_envios.png') }}" class="d-block w-100" alt="envios">
+
+    <div class="container mt-5">
+
+        {{-- ── Hero carousel ───────────────────────────────────────── --}}
+        <div class="home-carousel-wrapper mb-5">
+            <div id="carouselPrincipal" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('img/imagen_envios.png') }}" class="d-block w-100" alt="Envíos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/imagen_cuotas.png') }}" class="d-block w-100" alt="Cuotas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/imagen_redes.png') }}" class="d-block w-100" alt="Redes">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                <img src="{{ asset('img/imagen_cuotas.png') }}" class="d-block w-100" alt="cuotas">
-                </div>
-                <div class="carousel-item">
-                <img src="{{ asset('img/imagen_redes.png') }}" class="d-block w-100" alt="redes">
-                </div>
+                <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselPrincipal" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselPrincipal" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        
-        <section class="mt-12">
-            <div>
-                <h5 class="main-section-subtitle">Productos Destacados</h5>
+
+        {{-- ── Feature highlights ──────────────────────────────────── --}}
+
+        <div class="row g-3 mb-5">
+            <div class="col-6 col-md-3">
+                <div class="home-feature-card">
+                    <span class="home-feature-card__icon">&#128666;</span>
+                    <h6 class="home-feature-card__title">Envíos a todo el país</h6>
+                    <p class="home-feature-card__text">Correo argentino y retiro en local</p>
+                </div>
             </div>
-            <div class="mt-2 lg:flex justify-between">
-                
-                <x-product-item price="39.999" 
-                product-title="God of War 3" 
-                product-console="PS3"
-                image-source="{{ asset('img/god_3.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="55.555" 
-                product-title="Ghost of Tshunima" 
-                product-console="PS5"
-                image-source="{{ asset('img/ghost_tshunima.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="45.000" 
-                product-title="Crash It's about time" 
-                product-console="Ps4"
-                image-source="{{ asset('img/crash.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
+            <div class="col-6 col-md-3">
+                <div class="home-feature-card">
+                    <span class="home-feature-card__icon">&#128179;</span>
+                    <h6 class="home-feature-card__title">Cuotas sin interés</h6>
+                    <p class="home-feature-card__text">En productos seleccionados</p>
+                </div>
             </div>
-        </section>
-        <section class="mt-12">
-            <div>
-                <h5 class="main-section-subtitle">Últimos Ingresos</h5>
+            <div class="col-6 col-md-3">
+                <div class="home-feature-card">
+                    <span class="home-feature-card__icon">&#127918;</span>
+                    <h6 class="home-feature-card__title">Garantía oficial</h6>
+                    <p class="home-feature-card__text">En todos nuestros productos</p>
+                </div>
             </div>
-            <div class="mt-2 lg:flex justify-between">
-                
-                <x-product-item price="39.999" 
-                product-title="God of War 3" 
-                product-console="PS3"
-                image-source="{{ asset('img/god_3.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="55.555" 
-                product-title="Ghost of Tshunima" 
-                product-console="PS5"
-                image-source="{{ asset('img/ghost_tshunima.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
-
-                 <x-product-item price="45.000" 
-                product-title="Crash It's about time" 
-                product-console="Ps4"
-                image-source="{{ asset('img/crash.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
+            <div class="col-6 col-md-3">
+                <div class="home-feature-card">
+                    <span class="home-feature-card__icon">&#128172;</span>
+                    <h6 class="home-feature-card__title">Atención personalizada</h6>
+                    <p class="home-feature-card__text">Por WhatsApp y formulario</p>
+                </div>
             </div>
-        </section>
-        <section class="mt-12">
-            <div>
-                <h5 class="main-section-subtitle">Novedades</h5>
-            </div>
-            <div class="mt-2 lg:flex justify-between">
-                
-                <x-product-item price="39.999" 
-                product-title="God of War 3" 
-                product-console="PS3"
-                image-source="{{ asset('img/god_3.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
-                </x-product-item>
+        </div>
 
-                 <x-product-item price="55.555" 
-                product-title="Ghost of Tshunima" 
-                product-console="PS5"
-                image-source="{{ asset('img/ghost_tshunima.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+        {{-- ── Productos Destacados ─────────────────────────────────── --}}
+        <section class="mt-5">
+            <h5 class="main-section-subtitle mb-3">Productos Destacados</h5>
+            <div class="row">
+                <x-product-item price="39.999"
+                    product-title="God of War 3"
+                    product-console="PS3"
+                    image-source="{{ asset('img/god_3.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
                 </x-product-item>
-
-                 <x-product-item price="45.000" 
-                product-title="Crash It's about time" 
-                product-console="Ps4"
-                image-source="{{ asset('img/crash.webp') }}"
-                class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                <x-product-item price="55.555"
+                    product-title="Ghost of Tsushima"
+                    product-console="PS5"
+                    image-source="{{ asset('img/ghost_tshunima.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                </x-product-item>
+                <x-product-item price="45.000"
+                    product-title="Crash It's About Time"
+                    product-console="PS4"
+                    image-source="{{ asset('img/crash.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
                 </x-product-item>
             </div>
         </section>
 
+        {{-- ── Últimos Ingresos ────────────────────────────────────── --}}
+        <section class="mt-5">
+            <h5 class="main-section-subtitle mb-3">Últimos Ingresos</h5>
+            <div class="row">
+                <x-product-item price="39.999"
+                    product-title="God of War 3"
+                    product-console="PS3"
+                    image-source="{{ asset('img/god_3.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                </x-product-item>
+                <x-product-item price="55.555"
+                    product-title="Ghost of Tsushima"
+                    product-console="PS5"
+                    image-source="{{ asset('img/ghost_tshunima.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                </x-product-item>
+                <x-product-item price="45.000"
+                    product-title="Crash It's About Time"
+                    product-console="PS4"
+                    image-source="{{ asset('img/crash.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                </x-product-item>
+            </div>
+        </section>
 
-    </section>
+        {{-- ── Novedades ────────────────────────────────────────────── --}}
+        <section class="mt-5">
+            <h5 class="main-section-subtitle mb-3">Novedades</h5>
+            <div class="row">
+                <x-product-item price="39.999"
+                    product-title="God of War 3"
+                    product-console="PS3"
+                    image-source="{{ asset('img/god_3.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                </x-product-item>
+                <x-product-item price="55.555"
+                    product-title="Ghost of Tsushima"
+                    product-console="PS5"
+                    image-source="{{ asset('img/ghost_tshunima.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                </x-product-item>
+                <x-product-item price="45.000"
+                    product-title="Crash It's About Time"
+                    product-console="PS4"
+                    image-source="{{ asset('img/crash.webp') }}"
+                    class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">
+                </x-product-item>
+            </div>
+        </section>
 
+        {{-- ── CTA banner ───────────────────────────────────────────── --}}
+        <div class="home-cta mt-5">
+            <div>
+                <h4 class="home-cta__title">¿Buscás algo en particular?</h4>
+                <p class="home-cta__text">Explorá nuestro catálogo completo de consolas, videojuegos y accesorios.</p>
+            </div>
+            <a href="/catalogo" class="btn btn-retro home-cta__btn">Ver catálogo completo</a>
+        </div>
+
+    </div>
 </x-layout>
