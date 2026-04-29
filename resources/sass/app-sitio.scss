@@ -73,7 +73,6 @@
     transition: all 0.3s ease;
 }
 
-/* Estado normal */
 .header-section {
     padding: 10px 0;
     transition: all 0.3s ease;
@@ -85,7 +84,6 @@
     padding-bottom: 5px;
 }
 
-/* Estado reducido */
 .header-wrapper.shrink .header-section {
     padding: 5px 0;
 }

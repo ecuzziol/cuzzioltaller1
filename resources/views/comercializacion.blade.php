@@ -13,7 +13,7 @@
                 <li>Tarjetas de crédito y débito</li>
                 <li>Transferencia bancaria</li>
                 <li>Pago en efectivo (solo en local físico)</li>
-                <li>Billeteras virtuales</li>
+                <li>Mercado Pago</li>
             </ul>
             <p> También ofrecemos promociones y financiación en cuotas sin interés en productos seleccionados, sujetas a
                 disponibilidad y condiciones vigentes. </p>

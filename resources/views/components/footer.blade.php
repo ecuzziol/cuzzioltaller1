@@ -31,13 +31,13 @@
                             <a class="footer-menu-link" href="/catalogo?p_cat=videojuegos">Videojuegos</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a class="footer-menu-link" href="/catalogo">Productos</a>
-                        </li>
-                        <li class="footer-menu-item">
                             <a class="footer-menu-link" href="/catalogo?p_cat=repuestos">Repuestos</a>
                         </li>
                         <li class="footer-menu-item">
                             <a class="footer-menu-link" href="/catalogo?p_cat=accesorios">Accesorios</a>
+                        </li>
+                        <li class="footer-menu-item">
+                            <a class="footer-menu-link" href="/catalogo">Productos</a>
                         </li>
                     </ul>
             </div>
@@ -50,7 +50,7 @@
                             <a class="footer-menu-link" href="/Consultas">Consultas</a>
                         </li>
                         <li class="footer-menu-item">
-                            <a href="https://wa.me/543794632222" class="footer-menu-link">
+                            <a href="https://wa.me/543794632222" target="_blank" class="footer-menu-link">
                                 +543794632222
                             </a>
                         </li>
