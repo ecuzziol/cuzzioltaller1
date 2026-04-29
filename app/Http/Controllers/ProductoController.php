@@ -52,6 +52,20 @@ class ProductoController extends Controller
         return view('catalogo', ['productos' => collect(self::productos())]);
     }
 
+    public function Buscar(string $search_term)
+    {
+        $term = mb_strtolower($search_term);
+
+        return collect(self::productos())
+            ->filter(fn($p) =>
+                str_contains(mb_strtolower($p->Nombre), $term) ||
+                str_contains(mb_strtolower($p->Marca), $term) ||
+                str_contains(mb_strtolower($p->Categoria->value), $term) ||
+                str_contains(mb_strtolower($p->SubCategoria->value), $term)
+            )
+            ->values();
+    }
+
     public function Filtrar(?string $categoria = null, ?string $subcategoria = null)
     {
         $productos = collect(self::productos());
