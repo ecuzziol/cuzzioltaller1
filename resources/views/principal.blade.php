@@ -65,6 +65,21 @@
             </div>
         </div>
 
+        {{-- ── Categorías ───────────────────────────────────────────── --}}
+        <section class="mt-5 mb-2">
+            <h5 class="main-section-subtitle mb-4">Explorar por Categoría</h5>
+            <div class="row g-3">
+                @foreach (\App\Models\EnumCategoria::cases() as $cat)
+                    <div class="col-6 col-md-3">
+                        <a href="/catalogo?Categoria={{ $cat->value }}" class="home-cat-card">
+                            <span class="home-cat-card__name">{{ $cat->value }}</span>
+                            <span class="home-cat-card__arrow">&#8250;</span>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </section>
+
         {{-- ── Productos Destacados ─────────────────────────────────── --}}
         <section class="mt-5">
             <h5 class="main-section-subtitle mb-3">Productos Destacados</h5>

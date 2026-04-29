@@ -453,6 +453,41 @@
     }
 }
 
+.home-cat-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    padding: 1.4rem 1.25rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+
+    &:hover {
+        border-color: var(--footer-red-section-color);
+        background: #1a2235;
+        transform: translateY(-3px);
+
+        .home-cat-card__arrow {
+            color: var(--footer-red-section-color);
+            transform: translateX(3px);
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #e5e7eb;
+    }
+
+    &__arrow {
+        font-size: 1.4rem;
+        color: #6b7280;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+}
+
 .home-cta {
     background: #111827;
     border: 1px solid #374151;
