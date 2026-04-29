@@ -1,23 +1,38 @@
 <div class="header-section">
+
+    {{-- Logo --}}
     <div class="header-logo-section">
-        <img class="header-logo" src="{{ asset('img/logo_x.png') }}" />
-    </div>
-    <div class="header-search-section flex flex-col">
-        <input type="text" class="form-control" id="searchInput"
-               placeholder="Busque su producto aquí"
-               autocomplete="off">
+        <a href="/">
+            <img class="header-logo" src="{{ asset('img/logo_x.png') }}" alt="RetroStore" />
+        </a>
     </div>
 
-    <script>
-        document.getElementById('searchInput').addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' && this.value.trim() !== '') {
-                window.location.href = '/catalogo/buscar?q=' + encodeURIComponent(this.value.trim());
-            }
-        });
-    </script>
-    <div class="header-user-section flex flex-col">
-        <div>
-            <i class="bi bi-cart cart-icon"></i>
+    {{-- Search --}}
+    <div class="header-search-section">
+        <div class="header-search-wrapper">
+            <i class="bi bi-search header-search-icon"></i>
+            <input type="text"
+                   class="header-search-input"
+                   id="searchInput"
+                   placeholder="Buscar productos, consolas, marcas..."
+                   autocomplete="off">
         </div>
     </div>
+
+    {{-- Cart --}}
+    <div class="header-user-section">
+        <a href="#" class="header-cart-btn">
+            <i class="bi bi-cart3 header-cart-btn__icon"></i>
+            <span class="header-cart-btn__label">Carrito</span>
+        </a>
+    </div>
+
 </div>
+
+<script>
+    document.getElementById('searchInput').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && this.value.trim() !== '') {
+            window.location.href = '/catalogo/buscar?q=' + encodeURIComponent(this.value.trim());
+        }
+    });
+</script>
