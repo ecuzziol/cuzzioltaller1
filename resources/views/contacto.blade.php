@@ -1,58 +1,91 @@
 <x-layout active-page="contacto">
     <x-slot:title>
         RetroStore - Contacto
-        </x-slot>
-        <!-- Información de contacto -->
-        <section class="mx-auto w-10/12 md:w-6/12 lg:w-6/12 ">
+    </x-slot>
 
-            <h3 class="mb-4 text-center">Contacto</h3>
-            <p><strong>Empresa:</strong> RetroStore</p>
-            <p><strong>Titular:</strong> Eric Cuzziol</p>
-            <p><strong>Dirección:</strong> San Martin 1313</p>
-            <p><strong>Teléfono:</strong> <a href="https://wa.me/543794632222">+54 379 4632222</a> </p>
-            <hr>
+    <div class="container mt-5">
+        <h2 class="page-title">Contacto</h2>
 
-        </section>
-         
+        {{-- ── 2-column row ───────────────────────────────────────── --}}
+        <div class="row g-4">
 
-       <section class="mx-auto w-10/12 md:w-6/12 lg:w-6/12 ">
-           
-            <h3 class="mb-4  mt-4 text-center">Envíanos tu consulta</h3>
-            
-            <p class=""> Podés comunicarte con nosotros por teléfono o enviarnos tu consulta a través del
-                formulario. </p>
-            <form method="POST" action="/contacto">
-                @csrf
-                <div class="mb-3"> <label for="nombre" class="form-label">Nombre</label> 
-                    <input type="text"
-                        class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required> </div>
-                <div class="mb-3"> <label for="email" class="form-label">Correo electrónico</label> 
-                    <input type="email"
-                        class="form-control" id="email" name="email" placeholder="nombre@email.com" required>
+            {{-- Información de contacto --}}
+            <div class="col-12 col-md-6">
+                <div class="contacto-card h-100">
+                    <h4 class="contacto-card__title">Información</h4>
+
+                    <ul class="contacto-info-list">
+                        <li>
+                            <span class="contacto-info-list__label">Empresa</span>
+                            <span>RetroStore</span>
+                        </li>
+                        <li>
+                            <span class="contacto-info-list__label">Titular</span>
+                            <span>Eric Cuzziol</span>
+                        </li>
+                        <li>
+                            <span class="contacto-info-list__label">Dirección</span>
+                            <span>San Martín 1313, Corrientes</span>
+                        </li>
+                        <li>
+                            <span class="contacto-info-list__label">Teléfono</span>
+                            <a href="https://wa.me/543794632222" class="contacto-link">+54 379 4632222</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="mb-3"> <label for="mensaje" class="form-label">Mensaje</label> 
-                    <textarea
-                        class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu consulta..."
-                        required></textarea> </div> 
-                        <button type="submit" class="btn btn-primary w-100"> Enviar consulta </button>
-            </form>
-        </section>
-        <!-- <div class="col-12 col-md-7">
-            <div class="card shadow-sm h-100">
-                <div class="card-body">
-                    <h3 class="card-title mb-4">Envíanos tu consulta</h3>
-                    <form>
-                        <div class="mb-3"> <label for="nombre" class="form-label">Nombre</label> <input type="text"
-                                class="form-control" id="nombre" placeholder="Tu nombre" required> </div>
-                        <div class="mb-3"> <label for="email" class="form-label">Correo electrónico</label> <input
-                                type="email" class="form-control" id="email" placeholder="nombre@email.com" required>
+            </div>
+
+            {{-- Formulario de contacto --}}
+            <div class="col-12 col-md-6">
+                <div class="contacto-card h-100">
+                    <h4 class="contacto-card__title">Envíanos tu consulta</h4>
+                    <p class="contacto-card__subtitle">Podés comunicarte con nosotros por teléfono o enviarnos tu consulta a través del formulario.</p>
+
+                    <form method="POST" action="/contacto">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control contacto-input"
+                                   id="nombre" name="nombre" placeholder="Tu nombre" required>
                         </div>
-                        <div class="mb-3"> <label for="mensaje" class="form-label">Mensaje</label> <textarea
-                                class="form-control" id="mensaje" rows="4" placeholder="Escribí tu consulta..."
-                                required></textarea> </div> <button type="submit" class="btn btn-primary w-100"> Enviar
-                            consulta </button>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control contacto-input"
+                                   id="email" name="email" placeholder="nombre@email.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control contacto-input"
+                                      id="mensaje" name="mensaje" rows="4"
+                                      placeholder="Escribí tu consulta..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-retro w-100">Enviar consulta</button>
                     </form>
                 </div>
             </div>
-        </div> -->
+
+        </div>
+
+        {{-- ── Google Maps ─────────────────────────────────────────── --}}
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="contacto-card">
+                    <h4 class="contacto-card__title mb-3">Cómo llegar</h4>
+                    <div class="contacto-map">
+                        <iframe
+                            src="https://www.google.com/maps?q=San+Martin+1313,+Corrientes,+Corrientes,+Argentina&output=embed"
+                            width="100%"
+                            height="380"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación RetroStore">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </x-layout>
