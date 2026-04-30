@@ -44,9 +44,16 @@
                     <h4 class="contacto-card__title">Formas de entrega</h4>
                     <p class="page-text">Realizamos envíos a todo el país y contamos con diferentes modalidades de entrega:</p>
                     <ul class="page-list">
-                        <li><strong>Envíos a domicilio:</strong> a través de servicios de correo argentino.</li>
+                        <li><strong>Envíos a domicilio:</strong> a través de servicios de correo argentino.
+                            <div class="payment-logos">
+                                <img src="{{ asset('img/comercializacion/medioenvio/correoargentino.png') }}"
+                                        alt="{{ $logo }}"
+                                        class="payment-logo">
+                            </div>
+                        </li>
+                        
                         <li><strong>Retiro en local:</strong> podés retirar tu compra personalmente sin costo adicional
-                            acercándote a nuestro local ubicado en San Martín 1313 (Corrientes, capital).</li>
+                            acercándote a nuestro local ubicado en San Martín 1313 (Corrientes, Capital).</li>
                     </ul>
 
                     <h4 class="contacto-card__title mt-4">Tiempos de entrega</h4>
