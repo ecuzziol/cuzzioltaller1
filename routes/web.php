@@ -5,21 +5,29 @@ use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductoController::class, 'ObtenerPrincipal']);
+
 Route::get('/quienes-somos', function () {
     return view('quienes-somos');
 });
+
 Route::get('/contacto', function () { 
     return view('contacto'); 
 });
+
 Route::get('/comercializacion', function () { 
     return view('comercializacion'); 
 });
+
 Route::get('/terminos', function () { 
     return view('terminos'); 
 });
+
 Route::get('/catalogo', [ProductoController::class, 'ObtenerTodos']);
+
 Route::get('/catalogo/buscar', [ProductoController::class, 'BuscarVista']);
+
 Route::get('/consultas', function () { 
     return view('consultas'); 
 });
+
 Route::post('/contacto', [ContactoController::class, 'procesarConsulta']);

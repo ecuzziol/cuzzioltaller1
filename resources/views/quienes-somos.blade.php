@@ -8,7 +8,7 @@
 
         <div class="row g-4">
 
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-6">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Nuestra historia</h4>
                     <p class="page-text">En <strong>RetroStore</strong> somos una tienda online especializada en la venta de videojuegos,
@@ -31,13 +31,26 @@
                 </div>
             </div>
 
-            <div id="team-section" class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6">
                 <div class="contacto-card h-100">
-                    <h4 class="contacto-card__title">Nuestro equipo</h4>
-                    <p class="page-text">Detrás de RetroStore hay un equipo reducido pero comprometido, formado por personas que trabajan
+                    <h4 class="contacto-card__title">¿Qué nos motivó a crear RetroStore?</h4>
+                    <p class="page-text">Todo comenzó con una pregunta simple: <strong>¿por qué es tan difícil encontrar videojuegos y consolas clásicas en un solo lugar, con precios justos y atención real?</strong> Esa inquietud fue la chispa que encendió RetroStore.</p>
+                    <p class="page-text">El fundador creció rodeado de consolas, cartuchos y partidas interminables. Esa pasión por el mundo gamer nunca desapareció, y con el tiempo se transformó en algo más: la convicción de que existía un espacio vacío en el mercado para una tienda que combinara nostalgia con modernidad, que tratara a cada cliente como un gamer más, no como un número.</p>
+                    <p class="page-text">La motivación no fue solo comercial. Fue cultural. Preservar el acceso a consolas retro, acercar los últimos lanzamientos y ofrecer repuestos para alargar la vida útil de los equipos son decisiones que nacen de un genuino amor por la cultura del videojuego.</p>
+                    <p class="page-text mt-3">Hoy, cada producto en nuestro catálogo lleva ese espíritu: <strong>el de alguien que ama lo que hace y quiere compartirlo con otros.</strong></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row g-4 mt-1">
+            <div id="team-section" class="col-12">
+                <div class="contacto-card">
+                    <h4 class="contacto-card__title text-center">Nuestro equipo</h4>
+                    <p class="page-text text-center">Detrás de RetroStore hay un equipo reducido pero comprometido, formado por personas que trabajan
                         día a día para brindar el mejor servicio:</p>
 
-                    <ul class="contacto-info-list mt-3">
+                    <ul class="contacto-info-list contacto-info-list--centered mt-3">
                         <li>
                             <img src="{{ asset('img/team-1.jpg') }}" class="team-avatar" alt="Dueño y fundador">
                             <span class="contacto-info-list__label">Dueño y fundador</span>
@@ -56,7 +69,7 @@
                     </ul>
                 </div>
             </div>
-
         </div>
+
     </div>
 </x-layout>

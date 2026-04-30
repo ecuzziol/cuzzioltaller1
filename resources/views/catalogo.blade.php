@@ -13,7 +13,7 @@
         @if ($term)
             <div class="search-banner mb-4">
                 <span class="search-banner__label">Resultados para:</span>
-                <span class="search-banner__term">&ldquo;{{ $term }}&rdquo;</span>
+                <span class="search-banner__term">"{{ $term }}"</span>
                 <span class="search-banner__count">{{ $productos->count() }} producto(s)</span>
                 <a href="/catalogo" class="search-banner__clear">&#10005; Limpiar</a>
             </div>

@@ -6,10 +6,8 @@
     <div class="container mt-5">
         <h2 class="page-title">Contacto</h2>
 
-        {{-- ── 2-column row ───────────────────────────────────────── --}}
         <div class="row g-4">
 
-            {{-- Información de contacto --}}
             <div class="col-12 col-md-6">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Información</h4>
@@ -35,7 +33,6 @@
                 </div>
             </div>
 
-            {{-- Formulario de contacto --}}
             <div class="col-12 col-md-6">
                 <div class="contacto-card h-100">
                     <h4 class="contacto-card__title">Envíanos tu consulta</h4>
@@ -66,7 +63,6 @@
 
         </div>
 
-        {{-- ── Google Maps ─────────────────────────────────────────── --}}
         <div class="row mt-5">
             <div class="col-12">
                 <div class="contacto-card">
